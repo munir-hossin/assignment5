@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM Questions & Answers</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam molestiae, maiores vero asperiores distinctio nam accusamus dignissimos adipisci suscipit ex ipsa odit rem in blanditiis quaerat dolor assumenda molestias ad!
+<body class="bg-gray-100 p-6">
+    <div class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6">
+        <!-- <h1 class="text-2xl font-bold mb-4 text-center">DOM Questions & Answers</h1> -->
+        <header class="bg-white shadow-md p-4 flex justify-between items-center rounded-lg">
+            <h1 class="text-xl font-bold text-blue-700">Dev<span class="text-black">Board</span></h1>
+            <div class="flex items-center gap-4">
+              
+                <button id="change-bg" class="px-1 py-1 rounded-full bg-gradient-to-r from-indigo-500 to-teal-400">
+                    <a href="index.html">Back to desk</a>
+                </button>
+            </div>
+        </header>
+        
+        <div class="mb-4">
+            <h1 class="text-2xl font-bold text-center my-2">blogs</h1>
+            <h2 class="text-xl font-semibold">1. What are the different ways to select an element in the DOM?</h2>
+            <p class="text-gray-700 mt-2">I can select elements using:</p>
+            <ul class="list-disc pl-6 text-gray-700">
+                <li><code>document.getElementById('id')</code></li>
+                <li><code>document.getElementsByClassName('class')</code></li>
+                <li><code>document.getElementsByTagName('tag')</code></li>
+                <li><code>document.querySelector('selector')</code></li>
+                <li><code>document.querySelectorAll('selector')</code></li>
+            </ul>
+        </div>
+
+        <div class="mb-4">
+            <h2 class="text-xl font-semibold">2. What is the difference between innerHTML, innerText, and textContent?</h2>
+            <ul class="list-disc pl-6 text-gray-700">
+                <li><code>innerHTML</code>: Returns or sets HTML content inside an element.</li>
+                <li><code>innerText</code>: Returns only visible text, ignoring hidden elements.</li>
+                <li><code>textContent</code>: Returns all text, including hidden elements.</li>
+            </ul>
+        </div>
+
+        <div class="mb-4">
+            <h2 class="text-xl font-semibold">3. What is event delegation in the DOM?</h2>
+            <p class="text-gray-700 mt-2">Event delegation is a technique where a parent element listens for events on its child elements instead of adding event listeners to each child individually.</p>
+        </div>
+
+        <div class="mb-4">
+            <h2 class="text-xl font-semibold">4. What is event bubbling in the DOM?</h2>
+            <p class="text-gray-700 mt-2">Event bubbling is when an event starts from the target element and propagates up to its ancestors, triggering their event listeners along the way.</p>
+        </div>
+
+        <div>
+            <h2 class="text-xl font-semibold">5. How do you create, add, and remove elements using JavaScript?</h2>
+            <ul class="list-disc pl-6 text-gray-700">
+                <li><strong>Create:</strong> <code>document.createElement('tag')</code></li>
+                <li><strong>Add:</strong> <code>parent.appendChild(element)</code> or <code>parent.insertBefore(element, reference)</code></li>
+                <li><strong>Remove:</strong> <code>parent.removeChild(element)</code></li>
+            </ul>
+        </div>
+    </div>
 </body>
 </html>

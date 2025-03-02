@@ -11,59 +11,70 @@
     <header class="bg-white shadow-md p-4 flex justify-between items-center rounded-lg">
         <h1 class="text-xl font-bold text-blue-700">Dev<span class="text-black">Board</span></h1>
         <div class="flex items-center gap-4">
-            <div id="task-count" class="bg-blue-100 px-3 py-2 rounded-lg font-semibold text-blue-700">
-                Task Assigned <span class="text-black">5</span>
-            </div>
-            <div class="bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold cursor-pointer" id="discover-btn">
-                
-                <a href="discover.html">Discover Something New Today!</a>
-            </div>
-            <!-- <button id="change-bg" class="px-4 py-4 bg-gray-300 rounded-full "></button> -->
             <button id="change-bg" class="px-4 py-4 rounded-full bg-gradient-to-r from-indigo-500 to-teal-400"></button>
         </div>
     </header>
     
     <!-- Main Content -->
-    <div class="grid grid-cols-3 gap-4 mt-6">
-        <!-- Task Cards -->
-        <div class="col-span-2 grid grid-cols-3 gap-4" id="task-list">
-            <div class="task bg-white p-4 rounded-lg shadow-md border">
-                <h3 class="font-bold text-blue-700">ShopEase</h3>
-                <p class="font-semibold">Fix Mobile Button Issue</p>
-                <button class="complete-btn mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Complete</button>
+    <div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 pt-3 gap-4">
+            <div id="task-count" class="bg-blue-100 px-3 py-2 rounded-lg font-semibold text-blue-700">
+                Task Assigned <span class="text-black">6</span>
             </div>
-            <div class="task bg-white p-4 rounded-lg shadow-md border">
-                <h3 class="font-bold text-blue-700">CloudSync</h3>
-                <p class="font-semibold">Add Dark Mode</p>
-                <button class="complete-btn mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Complete</button>
+            <div class="bg-blue-400 text-white px-6 py-2 rounded-lg font-semibold cursor-pointer" id="discover-btn">
+                <a href="discover.html">Discover Something New Today!</a>
             </div>
-            <div class="task bg-white p-4 rounded-lg shadow-md border">
-                <h3 class="font-bold text-blue-700">SwiftPay</h3>
-                <p class="font-semibold">Optimize Home Page</p>
-                <button class="complete-btn mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Complete</button>
-            </div>
-            <div class="task bg-white p-4 rounded-lg shadow-md border">
-                <h3 class="font-bold text-blue-700">SwiftPay</h3>
-                <p class="font-semibold">Optimize Home Page</p>
-                <button class="complete-btn mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Complete</button>
-            </div>
-            <div class="task bg-white p-4 rounded-lg shadow-md border">
-                <h3 class="font-bold text-blue-700">SwiftPay</h3>
-                <p class="font-semibold">Optimize Home Page</p>
-                <button class="complete-btn mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Complete</button>
-            </div>
-            <div class="task bg-white p-4 rounded-lg shadow-md border">
-                <h3 class="font-bold text-blue-700">SwiftPay</h3>
-                <p class="font-semibold">Optimize Home Page</p>
-                <button class="complete-btn mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Complete</button>
-            </div>
+            <!-- Dynamic Date -->
+            <div class="date-container pl-4 rounded-lg pt-2 bg-blue-100" id="date-container"></div>
         </div>
-        
-        <!-- Activity Log -->
-        <div class="bg-white p-4 rounded-lg shadow-md border">
-            <h3 class="font-bold text-gray-700">Activity Log</h3>
-            <button id="clear-history" class="mt-2 px-4 py-1 bg-red-500 text-white rounded-lg">Clear History</button>
-            <div id="activity-log" class="mt-2 text-sm text-gray-500"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mt-6">
+            <!-- Task Cards -->
+            <div class="col-span-2 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4" id="task-list">
+                <div class="task bg-white p-4 rounded-lg shadow-md border">
+                    <h3 class="font-bold text-blue-700">ShopEase</h3>
+                    <p class="font-semibold">Fix Mobile Button Issue</p>
+                    <span>The mobile button is not responding on smaller screens. Adjust the event listener to handle touch events.</span>
+                    <button class="complete-btn mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Complete</button>
+                </div>
+                <div class="task bg-white p-4 rounded-lg shadow-md border">
+                    <h3 class="font-bold text-blue-700">CloudSync</h3>
+                    <p class="font-semibold">Add Dark Mode</p>
+                    <span>Implement a toggle button to switch between light and dark themes using Tailwind's dark mode utilities.</span>
+                    <button class="complete-btn mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Complete</button>
+                </div>
+                <div class="task bg-white p-4 rounded-lg shadow-md border">
+                    <h3 class="font-bold text-blue-700">SwiftPay</h3>
+                    <p class="font-semibold">Optimize Home Page</p>
+                    <span>Improve the loading speed by compressing images and reducing unnecessary API calls.</span>
+                    <button class="complete-btn mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Complete</button>
+                </div>
+                <div class="task bg-white p-4 rounded-lg shadow-md border">
+                    <h3 class="font-bold text-blue-700">TaskFlow</h3>
+                    <p class="font-semibold">Improve Task Management</p>
+                    <span>Add drag-and-drop functionality for better task organization.</span>
+                    <button class="complete-btn mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Complete</button>
+                </div>
+                <div class="task bg-white p-4 rounded-lg shadow-md border">
+                    <h3 class="font-bold text-blue-700">QuickNotes</h3>
+                    <p class="font-semibold">Enhance Note Sharing</p>
+                    <span>Allow users to share notes with a direct link and add real-time collaboration.</span>
+                    <button class="complete-btn mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Complete</button>
+                </div>
+                <div class="task bg-white p-4 rounded-lg shadow-md border">
+                    <h3 class="font-bold text-blue-700">Foodie</h3>
+                    <p class="font-semibold">Improve Recipe Filtering</p>
+                    <span>Enable users to filter recipes based on dietary preferences and available ingredients.</span>
+                    <button class="complete-btn mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Complete</button>
+                </div>
+            </div>
+            
+            <!-- Activity Log -->
+            <div class="bg-white p-4 rounded-lg shadow-md border">
+                <h3 class="font-bold text-gray-700">Activity Log</h3>
+                <button id="clear-history" class="mt-2 px-4 py-1 bg-red-500 text-white rounded-lg">Clear History</button>
+                <div id="activity-log" class="mt-2 text-sm text-gray-500"></div>
+            </div>
         </div>
     </div>
 
@@ -97,6 +108,15 @@
 
         document.getElementById("discover-btn").addEventListener("click", function () {
             window.location.href = "file.html";
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Set dynamic date
+            const dateContainer = document.getElementById("date-container");
+            const today = new Date();
+            const formattedDate = `${today.getDate()}-${today.getMonth() + 1}-${today.getFullYear()}`;
+            dateContainer.textContent = `Date: ${formattedDate}`;
         });
     </script>
 </body>
