@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBoard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 p-4">
+    <!-- Header -->
+    <header class="bg-white shadow-md p-4 flex justify-between items-center rounded-lg">
+        <h1 class="text-xl font-bold text-blue-700">Dev<span class="text-black">Board</span></h1>
+        <div class="flex items-center gap-4">
+            <div class="bg-blue-100 px-3 py-2 rounded-lg font-semibold text-blue-700">Task Assigned <span class="text-black">05</span></div>
+            <div class="bg-purple-500 text-white px-6 py-2 rounded-lg font-semibold">Discover Something New Today!</div>
+            <div class="bg-white px-4 py-2 rounded-lg shadow-md">Wed, <span class="font-semibold">Jul 28 2025</span></div>
+            <div class="relative">
+                <input type="checkbox" checked class="w-6 h-6 rounded-full border-2 border-gray-300">
+                <span class="absolute -top-2 -right-3 bg-blue-500 text-white text-xs rounded-full px-2 py-1">23</span>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="grid grid-cols-3 gap-4 mt-6">
+        <!-- Task Cards -->
+        <div class="col-span-2 grid grid-cols-3 gap-4">
+            <div class="bg-white p-4 rounded-lg shadow-md border">
+                <h3 class="font-bold text-blue-700">ShopEase</h3>
+                <p class="font-semibold">Fix Mobile Button Issue</p>
+                <p class="text-sm text-gray-500">Debug using Chrome DevTools, check for overlap...</p>
+                <p class="text-sm mt-2">Deadline: <span class="font-bold">21 March 2025</span></p>
+                <button class="mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Completed</button>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md border">
+                <h3 class="font-bold text-blue-700">CloudSync</h3>
+                <p class="font-semibold">Add Dark Mode</p>
+                <p class="text-sm text-gray-500">Store the user's preference in localStorage...</p>
+                <p class="text-sm mt-2">Deadline: <span class="font-bold">21 March 2025</span></p>
+                <button class="mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Completed</button>
+            </div>
+            <div class="bg-white p-4 rounded-lg shadow-md border">
+                <h3 class="font-bold text-blue-700">SwiftPay</h3>
+                <p class="font-semibold">Optimize Home Page</p>
+                <p class="text-sm text-gray-500">Debug using Chrome DevTools, check for overlap...</p>
+                <p class="text-sm mt-2">Deadline: <span class="font-bold">21 March 2025</span></p>
+                <button class="mt-2 px-4 py-1 bg-blue-500 text-white rounded-lg">Completed</button>
+            </div>
+        </div>
+        
+        <!-- Activity Log -->
+        <div class="bg-white p-4 rounded-lg shadow-md border">
+            <h3 class="font-bold text-gray-700">Activity Log</h3>
+            <button class="mt-2 px-4 py-1 bg-red-500 text-white rounded-lg">Clear History</button>
+            <p class="text-sm text-gray-500 mt-2">You have completed the task Add Dark Mode at 12:48:15 PM</p>
+            <p class="text-sm text-gray-500">You have completed the task Add Dark Mode at 12:48:15 PM</p>
+        </div>
+    </div>
+</body>
+</html>
